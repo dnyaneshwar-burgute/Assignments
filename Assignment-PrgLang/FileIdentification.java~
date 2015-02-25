@@ -42,6 +42,7 @@ class FileIdentification
                                             if(sCurrentLine.contains("def"))
                                               {  flag=1;
                                                System.out.println("File of ruby");
+                                               break;
                                                 
                                               }
                                             else
