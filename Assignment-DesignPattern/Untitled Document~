@@ -1,0 +1,6 @@
+Factory pattern is one of most used design pattern. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.In Factory pattern, we create object without exposing the creation logic to the client and refer to newly created object using a common interface.
+
+Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically. Observer pattern falls under behavioral pattern category.
+
+Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system. This type of design pattern comes under structural pattern as this pattern adds an interface to existing system to hide its complexities.
+This pattern involves a single class which provides simplified methods required by client and delegates calls to methods of existing system classes.
