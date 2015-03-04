@@ -1,102 +1,20 @@
 <html>
 <head>
-<style>
-li {
-    display:inline;
-}
-div{
-
-left: 100px;
-top: 200px;
-background-color: #f1f1f1;
-
-padding: 10px;
-color: black;
-border: #0000cc 2px dashed;
-display:block;
-}
-
-#result {
-display:none;
-}
-#gragh {
-display:none;
-}
-</style>
-<script>
-function myFunction(){
-   var eq=document.getElementById("eq").value;
-   var patt1=new RegExp("[a-z 0-9]x[+|-][a-z|0-9]y[+|-][a-z 0-9]=0");
-   //var patt2=new RegExp("[a-z 0-9]y[+|-][a-z|0-9]x[+|-][a-z 0-9]=0");
-   //var patt3=new RegExp("[a-z 0-9]y[+|-][a-z|0-9]x[+|-]=[a-z 0-9]");
-   //var patt4=new RegExp("[a-z 0-9]x[+|-][a-z|0-9]y[+|-]=[a-z 0-9]");
-   if(eq=="" || !(patt1.test(eq)))
-   {   
-      alert("please , Enter the correct equation for line");   
-   }
-   else
-   {
-      document.getElementById("result").style.display="block";
-      
-      // var test = "Hello";
-      //document.getElementById("").value = test;
-      var p=eq.charAt(0);
-      document.getElementById("xconst").value=p;
-      var q=eq.charAt(3);
-      document.getElementById("yconst").value=q;
-      var r=eq.charAt(6);
-      document.getElementById("const").value=r;  
-      
-   }   
- 
-};
-function drawGragh(){
-
-  var p=document.getElementById("xconst").value;  
-  var q=document.getElementById("yconst").value;
-  var r=document.getElementById("const").value;
-   
-  var xrange=parseInt(document.getElementById("xrange").value);
-  var xstep=parseInt(document.getElementById("xstep").value); 
-  if(xrange=="" || xstep=="")
-  {
-     alert("Enter the range of x and increment factor");
-   }
-  else
- {
-   document.getElementById("gragh").style.display="block";
-  var xvalue=0;
-  var yvalue=0;
-     var canvas = document.getElementById("lineCanvas");
-     var context = canvas.getContext('2d');
-     context.beginPath();
-     context.translate(150,150);
-  for(xvalue=0;xvalue<xrange;xvalue=xvalue+xstep)
-   {     
-      yvalue=parseInt(((-r-(p*xvalue))/q));
-      //context.moveTo(xvalue, yvalue);
-      context.lineTo(xvalue,yvalue);
-      context.stroke();    
-     
-   }
- }
-
-  
-};
-
-</script>
+ <link="stylesheet" type="text/css" href="CSS/style.css"/>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="JS/Operations.js"></script>
+<script src="JS/ObjectsDemo.js"></script>
 <h1><marquee>Java Script Assignment</marquee></h1>
 </head>
 <body>
 <form>
-
-<div id="parse"  align="center" style="border:solid"/><br/>
+<div id="parse"  align="center" style="border:solid"><br/>
 Enter The EQUATION :<input type="text" value="" id="eq"/><br/><br/>
-<input type="button" id="parse" value=" Parse ! "  onclick="myFunction()"/>
+<input type="button" id="parse1" value=" Parse ! " />
 <br/><br/><br/>
 </div><br/>
 
-<div id="result" class="resultDiv" align="center" style="border:solid" /><br/>
+<div id="result" class="resultDiv" align="center" style="border:solid"><br/>
 <ul>
 <li>
  XConstant:<input type="text" value="" id="xconst" size="1" readonly="true"/>
@@ -107,9 +25,10 @@ Enter The EQUATION :<input type="text" value="" id="eq"/><br/><br/>
 <br/>
 XRange:<input type="text" value="" id="xrange" size="1" /><br/><br/>
 XStep:&nbsp;&nbsp<input type="text" value="" id="xstep" size="1" /><br/><br/>
-<input type="button" value=" Draw Gragh ! " onclick="drawGragh()"/>
+<input type="button" value=" Draw Gragh ! " id="graph1"/>
 <br/><br/>
 </div><br/>
+
 <div id="gragh" align="center" style="border:solid">
 <canvas id="lineCanvas" width="600" height="200"></canvas>
 </div>
