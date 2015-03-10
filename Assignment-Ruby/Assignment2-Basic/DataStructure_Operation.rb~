@@ -1,5 +1,5 @@
 #ARRAY OPERATION
-def array_operation()
+def array_operation
       browsers = ['Chrome', 'Firefox', 'Safari', 'Opera', 'IE']
 
 	#method 1 length
@@ -29,9 +29,9 @@ def array_operation()
 end
 
 #HASH OPERATION
-def hash_operation()
-	puts
-	puts
+def hash_operation
+	print "\n"
+	print "\n"
 	puts"HASH OPERATIONS"
 	h1 = Hash["a" => 1, "b" => 2, "c"=>3,"d"=>4, "e"=>5]
 
@@ -56,9 +56,9 @@ end
 	
 
 # String operation
-def string_operation()
-	puts 
-	puts
+def string_operation
+	print "\n"
+	print "\n"
 	puts"STRING OPERATIONS"
 	str="Hello"
 	#method 1 length
@@ -82,6 +82,6 @@ def string_operation()
 end
 
 
-array_operation()
-hash_operation()
-string_operation()
+array_operation
+hash_operation
+string_operation
