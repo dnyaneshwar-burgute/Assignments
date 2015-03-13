@@ -1,0 +1,5 @@
+---
+pen: !ruby/object:Customer
+  cust_name: Burgute
+  cust_cardno: 23477224
+  cust_cardcvv: 333

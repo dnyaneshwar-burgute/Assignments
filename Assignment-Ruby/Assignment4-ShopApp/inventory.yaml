@@ -1,0 +1,16 @@
+---
+1: !ruby/object:Product
+  p_id: 1
+  pname: pen
+  stock_item: 5
+  company_name: cello
+2: !ruby/object:Product
+  p_id: 2
+  pname: watch
+  stock_item: 6
+  company_name: sonata
+3: !ruby/object:Product
+  p_id: 3
+  pname: mouse
+  stock_item: 10
+  company_name: microsoft
