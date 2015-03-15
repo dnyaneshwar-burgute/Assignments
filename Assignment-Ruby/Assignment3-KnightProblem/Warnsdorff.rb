@@ -1,4 +1,14 @@
+=begin
+	
+	Problem statement:
+        
+	Write a Program by which The knight can visit each square on a chess board exactly once. and find the shortest path between them.
+	Create a class ChessKnight containing the method probability which takes an int x, an int y (the start square of the chess knight, where 1,1 is one of the 	   corners).
+	
+	Also need to mention which Algorithm used to solve the Problem and why.
 
+	CODE BY... TEJU
+=end
 def check_position_available(n,x,y,solution)
 
 	if x>=0 and x<n and y>=0 and y<n and solution[x][y]==-1
